@@ -1,20 +1,16 @@
-import java.util.*
+fun main() {
+    var arr = listOf<Int>(10, 10, 20, 20, -20)
+    var count = 0;
 
-fun main(){
-    val scan = Scanner(System.`in`)
-    val n = scan.nextInt()
-
-    val arr = IntArray(n)
     for (i in arr.indices) {
-        arr[i] = scan.nextInt()
-    }
-    var store = arr[0]
-    for (i in 0 until n) {
-        for (j in i + 1 until n) {
-            if (arr[i] == arr[j]) {
-                store = arr[i]
-                print("$store,  $store,")
+        count = 0;
+        for (j in arr.indices) {
+            if (arr[i] == arr[j] && i != j){
+                count++;
             }
+        }
+        if (count >= 1){
+            print(arr[i].toString() + ", ")
         }
     }
 }

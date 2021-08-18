@@ -15,5 +15,5 @@ fun main() {
             print(arr[i].toString() + ", ")
         }
     }
-    if (!temp) println("Nothing is unqiue")
+    if (!temp) println("not found")
 }
